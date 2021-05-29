@@ -1,0 +1,16 @@
+<!-- Sidenav -->
+<app-sidebar></app-sidebar>
+<div class="main-content">
+  <!-- Top navbar -->
+  <app-navbar [items] = "cos" ></app-navbar>
+  <!-- Pages -->
+  <div *ngIf="router.url == '/dashboard'">
+  <app-dashboard (cos)="add($event)"></app-dashboard>
+  </div>
+  <div *ngIf="router.url !== '/dashboard'">
+    <router-outlet></router-outlet>
+    </div>
+  <div class="container-fluid">
+    <app-footer></app-footer>
+  </div>
+</div>

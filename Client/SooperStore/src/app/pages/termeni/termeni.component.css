@@ -1,0 +1,20 @@
+.header_termeni {
+  font-size: 26px;
+  color: white;
+  align-content: center;
+}
+
+.paragraf_termeni {
+  text-align: left;
+  color: white;
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+.paragraf_termeni_bold {
+  text-align: left;
+  font-weight: bold;
+  color: white;
+  font-size: 20px;
+  margin-top: 30px;
+}

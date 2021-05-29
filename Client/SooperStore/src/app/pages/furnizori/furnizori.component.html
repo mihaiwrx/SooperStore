@@ -1,0 +1,90 @@
+
+<div class="header bg-gradient-danger pb-8 pt-5 pt-md-8">
+  <div class="container-fluid">
+    <div class="header-body">
+
+    </div>
+  </div>
+</div>
+<div class="container-fluid mt--7">
+
+  <div class="row mt-5">
+    <div class="col-xl">
+      <div class="card shadow">
+        <div class="card-header border-0">
+          <div class="row align-items-center">
+            <div class="col">
+              <h3 class="mb-0">Furnizori</h3>
+            </div>
+            <div class="col text-right">
+              <a class="btn btn-sm btn-primary"  [routerLink]="['/addfurnizor']">Adauga Furnizor</a>
+            </div>
+          </div>
+        </div>
+        <div class="input-group input-group-alternative">
+          <div class="input-group-prepend">
+            <span class="input-group-text"><i class="fas fa-search"></i></span>
+          </div>
+          <input class="form-control" pInputText [(ngModel)]="search" (change)="this.filter()" placeholder="Search" type="text" (focus)="focus = true"
+          (blur)="focus = false">
+        </div>
+        <div class="table-responsive">
+          <!-- Projects table -->
+          <!-- <table class="table align-items-center table-flush">
+            <thead class="thead-light">
+              <tr>
+                <th scope="col">Nume Produs</th>
+                <th scope="col">Categorie</th>
+                <th scope="col">Pret</th>
+                <th scope="col">Stoc</th>
+              </tr>
+            </thead>
+            <tbody *ngFor="let produs of products">
+
+                <tr>
+                  <th scope="row">
+                    {{produs.nume}}
+                  </th>
+                  <td>
+                    {{produs.numeCategorie}}
+                  </td>
+                  <td>
+                    {{produs.pret}}
+                  </td>
+                  <td>
+                    {{produs.stoc}}
+                  </td>
+                </tr>
+            </tbody>
+          </table> -->
+          <p-table [value]="furnizori" tableStyleClass="table align-items-center table-flush" [paginator]="true" [rows]="5">
+            <ng-template pTemplate="header">
+                <tr>
+                  <th scope="col">Nume Furnizor</th>
+                  <th scope="col">Oras</th>
+                  <th scope="col"></th>
+                  <th scope="col"></th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-furnizor>
+              <tr>
+                <th scope="row">
+                  {{furnizor.nume}}
+                </th>
+                <td>
+                  {{furnizor.oras}}
+                </td>
+                <td>
+                  <a class="btn btn-success pull-right button_margins fa fa-edit" [routerLink]="['/editfurnizor', furnizor.id]"></a>
+                </td>
+                <td>
+                  <a class="btn btn-success pull-right button_margins fa fa-times" (click)='delete(furnizor.id)'></a>
+                </td>
+              </tr>
+            </ng-template>
+        </p-table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

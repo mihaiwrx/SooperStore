@@ -1,0 +1,21 @@
+.header_aboutus {
+  font-size: 26px;
+  color: white;
+  align-content: center;
+}
+
+.paragraf_aboutus {
+  text-align: left;
+  color: white;
+  font-size: 18px;
+  margin-top: 15px;
+  margin-bottom: 210px;
+}
+
+.paragraf_aboutus_bold {
+  text-align: left;
+  font-weight: bold;
+  color: white;
+  font-size: 20px;
+  margin-top: 30px;
+}

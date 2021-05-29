@@ -1,0 +1,59 @@
+
+<div class="header bg-gradient-danger py-7 py-lg-8">
+  <div class="container">
+    <div class="header-body text-center mb-7">
+      <div class="row justify-content-center">
+        <div class="col-lg-5 col-md-6">
+          <h1 class="text-white">Adaugare Furnizor</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="separator separator-bottom separator-skew zindex-100">
+    <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <polygon class="fill-default" points="2560 0 2560 100 0 100"></polygon>
+    </svg>
+  </div>
+</div>
+<!-- Page content -->
+<div class="container mt--8 pb-5">
+  <!-- Table -->
+  <div class="row justify-content-center">
+    <div class="col-lg-6 col-md-8">
+      <div class="card bg-secondary shadow border-0">
+        <div class="card-body px-lg-5 py-lg-5">
+          <form role="form" #loginForm="ngForm">
+            <div class="form-group">
+              <div class="input-group input-group-alternative mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="ni"></i></span>
+                </div>
+                <input name="nume" class="form-control" placeholder="Nume Furnizor" pInputText [(ngModel)]="entity.nume" required/>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group input-group-alternative mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="ni"></i></span>
+                </div>
+                <input name="descriere" class="form-control" placeholder="Oras" pInputText [(ngModel)]="entity.oras" required/>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group input-group-alternative mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="ni"></i></span>
+                </div>
+                <input name="contact" class="form-control" placeholder="Contact" pInputText [(ngModel)]="entity.contact" required/>
+              </div>
+            </div>
+            <div class="text-center">
+              <p-button [disabled]="loginForm.form.invalid" type="submit" (onClick)="add()" styleClass="btn btn-primary mt-4">Adaugare</p-button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,29 @@
+.header_startpage {
+  font-size: 150px;
+  color: black;
+  white-space: nowrap;
+  display: inline-block;
+  text-align: center;
+}
+
+.button_margins {
+  margin-bottom: 93px;
+}
+
+.poza_logo {
+  position: fixed;
+  top: 0px;
+  left: 10px;
+}
+
+.poza_shopping {
+  position: fixed;
+  bottom: -50px;
+  right: -80px;
+}
+
+.poza_shopping1 {
+  position: fixed;
+  bottom: -90px;
+  left: -70px;
+}
